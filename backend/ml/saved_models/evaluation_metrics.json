@@ -1,0 +1,500 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-01T15:45:17.282214",
+    "pipeline_type": "TF-IDF (1-2 ngrams) + Machine Learning Classifiers",
+    "feature_extraction": "TF-IDF Vectorizer with Sublinear Term Frequency Scaling",
+    "train_test_split": "80% Train, 20% Test (Stratified)"
+  },
+  "news_detection": {
+    "dataset_samples": 86,
+    "train_samples": 68,
+    "test_samples": 18,
+    "vocabulary_size": 2946,
+    "selected_model": "Multinomial Naive Bayes",
+    "models_comparison": {
+      "Logistic Regression": {
+        "accuracy": 94.44,
+        "precision": 100.0,
+        "recall": 88.89,
+        "f1_score": 94.12,
+        "confusion_matrix": [
+          [
+            9,
+            0
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1-score": 0.9473684210526315,
+            "support": 9.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9411764705882353,
+            "support": 9.0
+          },
+          "accuracy": 0.9444444444444444,
+          "macro avg": {
+            "precision": 0.95,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204335,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 0.9500000000000001,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204333,
+            "support": 18.0
+          }
+        }
+      },
+      "Linear SVM": {
+        "accuracy": 94.44,
+        "precision": 100.0,
+        "recall": 88.89,
+        "f1_score": 94.12,
+        "confusion_matrix": [
+          [
+            9,
+            0
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1-score": 0.9473684210526315,
+            "support": 9.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9411764705882353,
+            "support": 9.0
+          },
+          "accuracy": 0.9444444444444444,
+          "macro avg": {
+            "precision": 0.95,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204335,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 0.9500000000000001,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204333,
+            "support": 18.0
+          }
+        }
+      },
+      "Multinomial Naive Bayes": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "confusion_matrix": [
+          [
+            9,
+            0
+          ],
+          [
+            0,
+            9
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 9.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 9.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 18.0
+          }
+        }
+      },
+      "Random Forest": {
+        "accuracy": 94.44,
+        "precision": 100.0,
+        "recall": 88.89,
+        "f1_score": 94.12,
+        "confusion_matrix": [
+          [
+            9,
+            0
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 0.9,
+            "recall": 1.0,
+            "f1-score": 0.9473684210526315,
+            "support": 9.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 0.8888888888888888,
+            "f1-score": 0.9411764705882353,
+            "support": 9.0
+          },
+          "accuracy": 0.9444444444444444,
+          "macro avg": {
+            "precision": 0.95,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204335,
+            "support": 18.0
+          },
+          "weighted avg": {
+            "precision": 0.9500000000000001,
+            "recall": 0.9444444444444444,
+            "f1-score": 0.9442724458204333,
+            "support": 18.0
+          }
+        }
+      }
+    },
+    "top_features": {
+      "fake_indicators": [],
+      "real_indicators": []
+    }
+  },
+  "review_detection": {
+    "dataset_samples": 36,
+    "train_samples": 28,
+    "test_samples": 8,
+    "vocabulary_size": 1061,
+    "selected_model": "Logistic Regression",
+    "models_comparison": {
+      "Logistic Regression": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          }
+        }
+      },
+      "Linear SVM": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          }
+        }
+      },
+      "Multinomial Naive Bayes": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          }
+        }
+      },
+      "Random Forest": {
+        "accuracy": 100.0,
+        "precision": 100.0,
+        "recall": 100.0,
+        "f1_score": 100.0,
+        "confusion_matrix": [
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "report": {
+          "Real/Genuine": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "Fake/Suspicious": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 4.0
+          },
+          "accuracy": 1.0,
+          "macro avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          },
+          "weighted avg": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 8.0
+          }
+        }
+      }
+    },
+    "top_features": {
+      "fake_indicators": [
+        {
+          "word": "best",
+          "weight": 0.372
+        },
+        {
+          "word": "ever",
+          "weight": 0.327
+        },
+        {
+          "word": "buy",
+          "weight": 0.294
+        },
+        {
+          "word": "every",
+          "weight": 0.286
+        },
+        {
+          "word": "totally",
+          "weight": 0.232
+        },
+        {
+          "word": "this",
+          "weight": 0.212
+        },
+        {
+          "word": "superior",
+          "weight": 0.204
+        },
+        {
+          "word": "stars",
+          "weight": 0.201
+        },
+        {
+          "word": "decision",
+          "weight": 0.198
+        },
+        {
+          "word": "decision ever",
+          "weight": 0.198
+        },
+        {
+          "word": "best decision",
+          "weight": 0.198
+        },
+        {
+          "word": "every penny",
+          "weight": 0.197
+        },
+        {
+          "word": "totally worth",
+          "weight": 0.197
+        },
+        {
+          "word": "penny",
+          "weight": 0.197
+        },
+        {
+          "word": "worth every",
+          "weight": 0.197
+        }
+      ],
+      "real_indicators": [
+        {
+          "word": "with",
+          "weight": 0.294
+        },
+        {
+          "word": "the",
+          "weight": 0.257
+        },
+        {
+          "word": "for",
+          "weight": 0.211
+        },
+        {
+          "word": "with the",
+          "weight": 0.211
+        },
+        {
+          "word": "happy",
+          "weight": 0.175
+        },
+        {
+          "word": "happy with",
+          "weight": 0.175
+        },
+        {
+          "word": "overall",
+          "weight": 0.175
+        },
+        {
+          "word": "overall happy",
+          "weight": 0.175
+        },
+        {
+          "word": "the purchase",
+          "weight": 0.175
+        },
+        {
+          "word": "and",
+          "weight": 0.174
+        },
+        {
+          "word": "but",
+          "weight": 0.172
+        },
+        {
+          "word": "well",
+          "weight": 0.154
+        },
+        {
+          "word": "slightly",
+          "weight": 0.149
+        },
+        {
+          "word": "purchase",
+          "weight": 0.143
+        },
+        {
+          "word": "price point",
+          "weight": 0.141
+        }
+      ]
+    }
+  }
+}
